@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw;
+            align-items: center;
+            margin: 0.1vh;
+            border: 2px solid black;
+        }
+        .f:hover{
+            opacity:40%;
+            background-color: white;
+            color: black;
+        }
+        .f label{
+            height: 3vw;
+        }
+        .i{
+            height: 2vw;
+            width: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <img style="height: 100%;width: 100%;" src="static/images/b2.jpg">
+    <button style="border:1px solid white;color: white;background-color: black;position: fixed;top:2vh;left:5vh;height: 5vh;"
+    onclick="window.location.href='/'">Home</button>
+    <div class="main">
+        <h3 style="text-align: center;color: white;position:absolute;">Welcome to Fintech bank,if you are a new user register here</h3>
+        <form style="position: absolute;left:30%;padding:4vw;top:8%;" action="/regSuccess" method="post" >
+            <div class="f">    
+            <label>Enter your name</label>
+                <input class="i" type="text" placeholder="Full name" name="user">
+            </div>
+            <div class="f">
+                <label>Enter you aadhar number</label>
+                <input class="i" type="text" placeholder="XXXX XXXX XXXX" name="aadhar">
+            </div>
+            <div class="f">
+                <label>Enter your date of birth</label>
+                <input class="i" type="date" name="dob">
+            </div>
+            <div class="f">
+                <label>Enter your bank name</label>
+                <select class="i" name="bank">
+                <option value="sbi">State Bank of India</option>
+                <option value="canara">Cara Bank</option>
+                <option value="axis">Axis Bank</option>
+                <option value="karnataka">karnataka bank</option>    
+                </select>
+            </div>
+            <div class="f">
+            <label>Enter Mobile number</label>
+            <input class="i" type="text" placeholder="XXXXXXXXXX" name="Mobile_no">
+            </div>
+            <div class="f">
+                    <label>Enter your credit card number</label>
+                    <input class="i" type="text" placeholder="XXXX XXXX XXXX XXXX" name="credit_card">
+            </div>
+            <input type="checkbox"><label style="color:white;">I agree to terms and conditions</label>
+            
+            <input style="background-color: green;height: 2vw;color: white;margin-left: 10vw;margin-top: 2vw;" type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

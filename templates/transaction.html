@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form div{
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            height: 2vw;
+            margin: 0.1vh;
+            padding: 1vw;
+            border:2px solid blue;
+        }
+        form div:hover{
+            background-color: white;
+            color:black;
+            opacity: 40%;
+        }
+    </style>
+</head>
+<body>
+    <img style="width: 100%;height: 100%;opacity: 80%;" src="static/images/bank1.jpg">
+    <button style="position: absolute;top:1vw;left:1vw;background-color: green;color:white;" onclick="window.location.href='/'">Home</button>
+    <div class="main">
+        <form style="position:absolute;top:0.5vw;left:30vw;" action="/validate" method="POST">
+            <div>
+            <label>Choose the Transaction Amount in Rs (0 to 20000)</label>
+                <input type="text" name="TransactionAmt">
+        </div>
+        <div>
+            <label>Choose the Payment Card number</label>
+            <input type="text" name="credit_card">
+        </div>
+        <div>
+            <label>Choose the Payment Card Category"</label>
+            <select name="card4">
+                <option value="1">Discover</option>
+                <option value="2">Mastercard</option>
+                <option value="3">American Express</option>
+                <option value="4">Visa</option>
+            </select>
+        </div>
+        <div>
+            <label>Choose the Payment Card Type</label>
+            <span>
+            <input type="radio" value="CASH_OUT" name="tp">credit
+            <input type="radio" value="DEBIT" name="tp">debit
+            </span>
+        </div>
+        <div>
+         <label>Enter the card pin number</label>
+         <input type="password" name="cno">
+        </div>
+        <div>
+            <label>Choose the Payment Billing Country Code</label>
+            <input type="text" name="addr2">
+        </div>
+        <div>
+        <label>Choose the Purchaser Email Domain</label>
+        <select name="P_emaildomain">
+            <option value="0">Gmail (Google)</option>
+            <option value="1">Outlook (Microsoft)</option>
+            <option value="2">Mail.com</option>
+            <option value="3">Others</option>
+            <option value="4">Yahoo</option>
+        </select>
+        </div>
+        <div>
+            <label>Choose the Product Code</label>
+            <select name="ProductCD">
+                <option value="0">C</option>
+                <option value="1">H</option>
+                <option value="2">R</option>
+                <option value="3">S</option>
+                <option value="4">W</option>
+            </select>
+        </div>
+        <div>
+            <label>Choose the Payment Device Type</label>
+            <span>
+            <input type="radio"  name="DeviceType"value="1">Mobile
+            <input type="radio" name="DeviceType"value="2">Desktop
+            </span>
+        </div>
+        <input  style="background-color:green;color:white;height: 3vw;" type="submit" value="Make Payment">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .main{
+       position:absolute;
+       top:30%;
+       left:40%;
+       color:white;
+    }
+
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="main">
+    <h1>Payment Status</h1>
+    <h3 style="padding:1vw;">{{ msg }}</h3>
+    {% if msg == "No Fraud" %}
+            <h3 id="cprint">Payment Success</h3>
+        {% endif %}
+    <button style="background-color: green;color:white;height:2vw;" onclick="window.location.href='/'">home</button>
+    <button style="background-color: green;color:white;height:2vw;" onclick="window.location.href='/transaction'">Try again</button>
+    </div>
+<script>
+    var count=0;
+    let ele=document.getElementsByClassName("cprint")
+</script>
+</body>
+</html>
