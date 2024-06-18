@@ -12,7 +12,7 @@ CSV_FILE_PATH = 'users.csv'
 MODEL_FILE_PATH = 'trained_model.sav'
 
 # Load and preprocess data
-data = pd.read_csv("C:\\Users\\MEGHANA M\\documents\\DatasetFraud.csv")
+data = pd.read_csv("DatasetFraud.csv")
 data["type"] = data["type"].map({
     "CASH_OUT": 1, 
     "PAYMENT": 2,                              
